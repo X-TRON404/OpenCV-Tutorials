@@ -29,6 +29,6 @@ To remove noise
 **Feature Matching:** \
 1)Feature matching using ORB (Oriented FAST and Rotated BRIEF)\
 2)BFMatcher\
-<br /> 
+<br/> 
 **CascadeClassifier:**\
 1)haar cascade
