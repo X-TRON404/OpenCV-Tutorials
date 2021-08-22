@@ -36,15 +36,20 @@ img2=cv2.imread('mainlogo.png')
 #addWeighted()
 #weighted addition is '''Preferred'''
 
+#function:
+'''g(x)=(1−α)f0(x)+αf1(x)+γ'''
+
 #Use:
 '''Here we assign weights to the images and then add them'''
 #Parameters:
 '''
 (1)img1 
 (2)weight* number of images 
-(n)Gammma factor 
+(n)Gammma = bias to add
 '''
-# weighted=cv2.addWeighted(img1,0.6,img2,0.4,0)
+alpha = 0.6
+beta = 1-alpha
+weighted=cv2.addWeighted(img1,alpha,img2,beta,0)
 
 
 
