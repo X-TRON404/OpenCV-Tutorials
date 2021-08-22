@@ -3,6 +3,13 @@
 #Opening for false positives and Closing for false negatives
 #top hat and blackhat
 
+#erosion:
+'''(1)Erosion has a slider.It slides on the entire image and checks if all the pixels in the image have the same color or not.
+(2)If there is one pixel that is not the same as the remaining pixels, we replace that pixel to have the same color as the others'''
+
+#Dilation:
+'''(1)Dilation has a slider.It slides on the entire image and checks if all the pixels in the image have the same color or not.
+(2)If there is one pixel(p1) that is not the same as the remaining pixels, we replace all the pixel to have the same color as the p1'''
 
 
 import cv2 
@@ -23,7 +30,9 @@ while True:
 
     kernel = np.ones((5,5),np.uint8)
     
+    #remove false positives
     opening = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+    #remove false negatives
     closing = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
     cv2.imshow('Original',frame)
