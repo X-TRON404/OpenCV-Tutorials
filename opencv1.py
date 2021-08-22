@@ -56,7 +56,7 @@ if k == 27:
 
 # wait for 's' key to save and exit
 elif k == ord('s'): 
-    #im.write()
+    '''im.write()'''
     #Use:
     '''Used to save the image'''
     #Parameters:
