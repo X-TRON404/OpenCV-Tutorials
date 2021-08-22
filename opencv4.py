@@ -2,7 +2,6 @@
 '''Here we are going to look at different operations like
  copying a part of image modifying parts of image,etc'''
 
-
 import numpy as np
 import cv2
 
